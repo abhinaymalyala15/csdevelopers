@@ -2558,6 +2558,25 @@ a {
   align-items: start;
 }
 
+/* Contact page: phone / WhatsApp / office only (no form) */
+.contact-grid--solo {
+  grid-template-columns: 1fr;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.contact-grid--solo .contact-aside {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pd-location .pd-map-embed {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
 .contact-form-panel {
   position: relative;
   padding: clamp(40px, 5.5vw, 56px) clamp(36px, 4.5vw, 48px);
@@ -3008,6 +3027,12 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .contact-grid--solo .contact-aside {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
   }
 
   .contact-office {

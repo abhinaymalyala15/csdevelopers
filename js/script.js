@@ -266,22 +266,6 @@
     });
   }
 
-  document.querySelectorAll(".enquiry-form").forEach(function (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var btn = form.querySelector('button[type="submit"]');
-      if (!btn) return;
-      var original = btn.textContent;
-      btn.textContent = "Sent — we will reach out soon";
-      btn.disabled = true;
-      setTimeout(function () {
-        btn.textContent = original;
-        btn.disabled = false;
-        form.reset();
-      }, 2800);
-    });
-  });
-
   window.addEventListener("load", function () {
     if (typeof AOS !== "undefined") {
       AOS.refresh();
