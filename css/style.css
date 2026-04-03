@@ -33,7 +33,7 @@
   --radius-lg: 24px;
   --radius-xl: 32px;
   --font: "Poppins", system-ui, sans-serif;
-  --header-h: 96px;
+  --header-h: 104px;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -243,6 +243,14 @@ a {
   object-fit: contain;
   object-position: left center;
   transition: opacity 0.25s ease, transform 0.3s var(--ease-out);
+}
+
+/* Header: larger stacked mark + soft corners (helps if PNG has white padding) */
+.site-header .logo--brand .logo__img {
+  max-height: clamp(58px, 15vw, 86px);
+  max-width: min(260px, 62vw);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
 }
 
 .logo--brand:hover .logo__img {
@@ -2750,7 +2758,7 @@ a {
   flex-direction: column;
   gap: 20px;
   position: sticky;
-  top: 112px;
+  top: 120px;
 }
 
 .contact-channel {
