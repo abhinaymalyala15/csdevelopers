@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 168" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">CS DEVEELOPERS  Building your dreams into reality</title>
+  <g transform="translate(18, 4)">
+    <!-- Grey roads / base (two curves meeting at centre) -->
+    <path fill="#5C6670" d="M28 78c18 8 36 10 54 6 10-2 18-6 24-12l4 6c-8 8-20 14-34 16-20 3-42 1-62-8l4-8z"/>
+    <path fill="#5C6670" d="M252 78c-18 8-36 10-54 6-10-2-18-6-24-12l-4 6c8 8 20 14 34 16 20 3 42 1 62-8l-4-8z"/>
+    <path fill="#6B7280" d="M100 72c12 6 24 8 40 8s28-2 40-8l2 10c-12 6-26 9-42 9s-30-3-42-9l2-10z"/>
+    <!-- Lane markings -->
+    <path stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" fill="none" d="M48 82 L92 88 M188 88 L232 82 M120 86 L160 86"/>
+    <!-- Blue house (left) -->
+    <path fill="#2563EB" d="M76 76 L98 48 L120 76V92H76V76z"/>
+    <path fill="#1D4ED8" d="M76 76 L98 52 L120 76H76z"/>
+    <!-- White S inside house -->
+    <text x="98" y="78" text-anchor="middle" font-family="Poppins, system-ui, sans-serif" font-size="26" font-weight="800" fill="#FFFFFF">S</text>
+    <!-- Yellow / gold tower (right) -->
+    <path fill="#EAB308" d="M128 34h36l4 8v58h-40V34z"/>
+    <path fill="#CA8A04" d="M128 34l20-10 20 10v6h-40v-6z"/>
+    <rect x="134" y="44" width="5" height="4" rx="0.5" fill="#FEF9C3"/>
+    <rect x="143" y="44" width="5" height="4" rx="0.5" fill="#FEF9C3"/>
+    <rect x="152" y="44" width="5" height="4" rx="0.5" fill="#FEF9C3"/>
+    <rect x="134" y="52" width="5" height="4" rx="0.5" fill="#FEF9C3"/>
+    <rect x="143" y="52" width="5" height="4" rx="0.5" fill="#FEF9C3"/>
+    <rect x="152" y="52" width="5" height="4" rx="0.5" fill="#FEF9C3"/>
+    <rect x="134" y="60" width="5" height="4" rx="0.5" fill="#FEF9C3"/>
+    <rect x="143" y="60" width="5" height="4" rx="0.5" fill="#FEF9C3"/>
+    <rect x="152" y="60" width="5" height="4" rx="0.5" fill="#FEF9C3"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="140" y="118" text-anchor="middle" font-family="Poppins, system-ui, sans-serif" font-size="19" font-weight="800" fill="#2563EB" letter-spacing="0.06em">CS DEVEELOPERS</text>
+  <!-- Tagline (serif) -->
+  <text x="140" y="140" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="6.5" font-weight="400" fill="#374151" letter-spacing="0.12em"> BUILDING YOUR DREAMS INTO REALITY </text>
+</svg>

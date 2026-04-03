@@ -230,9 +230,9 @@ a {
 }
 
 .logo--brand .logo__img {
-  height: 48px;
+  height: 52px;
   width: auto;
-  max-width: min(220px, 52vw);
+  max-width: min(200px, 56vw);
   object-fit: contain;
   display: block;
   transition: opacity 0.25s ease, transform 0.3s var(--ease-out);
@@ -1156,8 +1156,8 @@ a {
 }
 
 .footer-logo.logo--brand .logo__img {
-  height: 44px;
-  max-width: 200px;
+  height: 48px;
+  max-width: 180px;
   opacity: 0.95;
 }
 
