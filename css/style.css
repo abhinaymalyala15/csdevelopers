@@ -33,7 +33,7 @@
   --radius-lg: 24px;
   --radius-xl: 32px;
   --font: "Poppins", system-ui, sans-serif;
-  --header-h: 76px;
+  --header-h: 96px;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -229,12 +229,19 @@ a {
   line-height: 0;
 }
 
+/* Stacked PNG logo (icon + wordmark + tagline): scale by height, keep sharp */
+.logo--brand {
+  flex-shrink: 0;
+}
+
 .logo--brand .logo__img {
-  height: 52px;
-  width: auto;
-  max-width: min(200px, 56vw);
-  object-fit: contain;
   display: block;
+  height: auto;
+  width: auto;
+  max-height: clamp(48px, 11vw, 68px);
+  max-width: min(190px, 52vw);
+  object-fit: contain;
+  object-position: left center;
   transition: opacity 0.25s ease, transform 0.3s var(--ease-out);
 }
 
@@ -1156,8 +1163,12 @@ a {
 }
 
 .footer-logo.logo--brand .logo__img {
-  height: 48px;
-  max-width: 180px;
+  height: auto;
+  max-height: 76px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  object-position: left top;
   opacity: 0.95;
 }
 
@@ -1655,7 +1666,7 @@ a {
 }
 
 .pd-intro {
-  padding: calc(76px + clamp(28px, 5vw, 52px)) 0 clamp(40px, 6vw, 64px);
+  padding: calc(var(--header-h) + clamp(28px, 5vw, 52px)) 0 clamp(40px, 6vw, 64px);
   background: linear-gradient(185deg, #f6f6f6 0%, #ffffff 55%);
   border-bottom: 1px solid var(--color-border);
   position: relative;
@@ -2739,7 +2750,7 @@ a {
   flex-direction: column;
   gap: 20px;
   position: sticky;
-  top: 104px;
+  top: 112px;
 }
 
 .contact-channel {
