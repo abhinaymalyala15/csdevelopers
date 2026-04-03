@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" role="img" aria-labelledby="ttl">
+  <title id="ttl">CS Developers</title>
+  <g transform="translate(12, 6)">
+    <!-- Grey base -->
+    <path fill="#6B7280" d="M24 58c10-14 28-22 48-22s38 8 48 22l-6 10c-10-8-24-12-42-12s-32 4-42 12l-6-10z"/>
+    <path fill="#9CA3AF" d="M64 58c8-10 20-16 34-16s26 6 34 16v6H64v-6z"/>
+    <!-- Blue house -->
+    <path fill="#2563EB" d="M8 52L32 24l24 28v32H8V52z"/>
+    <rect x="24" y="62" width="10" height="14" rx="1" fill="#EFF6FF"/>
+    <!-- Gold tower -->
+    <path fill="#EAB308" d="M56 12h28v72H56V12z"/>
+    <rect x="62" y="20" width="6" height="5" rx="0.5" fill="#FFFBEB"/>
+    <rect x="72" y="20" width="6" height="5" rx="0.5" fill="#FFFBEB"/>
+    <rect x="62" y="30" width="6" height="5" rx="0.5" fill="#FFFBEB"/>
+    <rect x="72" y="30" width="6" height="5" rx="0.5" fill="#FFFBEB"/>
+    <rect x="62" y="40" width="6" height="5" rx="0.5" fill="#FFFBEB"/>
+    <rect x="72" y="40" width="6" height="5" rx="0.5" fill="#FFFBEB"/>
+  </g>
+  <text x="118" y="58" font-family="Poppins, system-ui, sans-serif" font-size="22" font-weight="800" fill="#2563EB" letter-spacing="0.04em">CS DEVELOPERS</text>
+  <text x="118" y="82" font-family="Poppins, system-ui, sans-serif" font-size="7" font-weight="600" fill="#6B7280" letter-spacing="0.14em">— BUILDING YOUR DREAMS INTO REALITY —</text>
+</svg>
