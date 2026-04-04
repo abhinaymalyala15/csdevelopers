@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  var prefersReduced =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   var header = document.getElementById("siteHeader");
   var navToggle = document.querySelector(".nav-toggle");
   var mainNav = document.querySelector(".main-nav");
@@ -48,12 +51,14 @@
       effect: "fade",
       fadeEffect: { crossFade: true },
       autoplay: {
-        delay: 6500,
+        delay: 7200,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
       pagination: {
         el: ".hero-pagination",
         clickable: true,
+        dynamicBullets: false,
       },
       navigation: {
         nextEl: ".hero-swiper .swiper-button-next",
@@ -130,6 +135,26 @@
             start: "top top",
             end: "bottom top",
             scrub: true,
+          },
+        });
+      });
+    }
+
+    var ecoFlow = document.querySelector("[data-eco-flow]");
+    if (ecoFlow && !prefersReduced) {
+      var ecoSteps = gsap.utils.toArray(".home-eco-step");
+      gsap.set(ecoSteps, { opacity: 0, y: 28 });
+      ecoSteps.forEach(function (step, i) {
+        gsap.to(step, {
+          y: 0,
+          opacity: 1,
+          duration: 0.65,
+          delay: i * 0.08,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ecoFlow,
+            start: "top 82%",
+            toggleActions: "play none none none",
           },
         });
       });
@@ -239,8 +264,35 @@
   }
 
   var tiltCards = document.querySelectorAll("[data-tilt]");
-  var prefersReduced =
-    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var homeContactForm = document.getElementById("homeContactForm");
+  var homeFormThanks = document.getElementById("homeFormThanks");
+  if (homeContactForm) {
+    homeContactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var fd = new FormData(homeContactForm);
+      var name = (fd.get("name") || "").toString().trim();
+      var phone = (fd.get("phone") || "").toString().trim();
+      var email = (fd.get("email") || "").toString().trim();
+      var interest = (fd.get("interest") || "").toString();
+      var message = (fd.get("message") || "").toString().trim();
+      var subject = encodeURIComponent("Website enquiry — " + interest);
+      var body =
+        "Name: " +
+        name +
+        "\nPhone: " +
+        phone +
+        (email ? "\nEmail: " + email : "") +
+        "\nInterest: " +
+        interest +
+        (message ? "\n\nMessage:\n" + message : "");
+      var mailto = "mailto:info@csdeveelopers.com?subject=" + subject + "&body=" + encodeURIComponent(body);
+      window.location.href = mailto;
+      if (homeFormThanks) {
+        homeFormThanks.hidden = false;
+      }
+    });
+  }
 
   if (!prefersReduced && tiltCards.length) {
     tiltCards.forEach(function (card) {
@@ -250,8 +302,8 @@
         var y = e.clientY - rect.top;
         var midX = rect.width / 2;
         var midY = rect.height / 2;
-        var rotateX = ((y - midY) / midY) * -7;
-        var rotateY = ((x - midX) / midX) * 7;
+        var rotateX = ((y - midY) / midY) * -9;
+        var rotateY = ((x - midX) / midX) * 9;
         card.style.transform =
           "perspective(1000px) rotateX(" +
           rotateX +
