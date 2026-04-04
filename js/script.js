@@ -111,7 +111,7 @@
     gsap.registerPlugin(ScrollTrigger);
 
     var heroEl = document.querySelector(".hero");
-    if (heroEl) {
+    if (heroEl && !heroEl.classList.contains("hero--carousel")) {
       gsap.utils.toArray(".parallax-hero-bg").forEach(function (bg) {
         gsap.to(bg, {
           yPercent: 12,
