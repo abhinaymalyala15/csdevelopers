@@ -142,7 +142,7 @@
 
     var ecoFlow = document.querySelector("[data-eco-flow]");
     if (ecoFlow && !prefersReduced) {
-      var ecoSteps = gsap.utils.toArray(".home-eco-step");
+      var ecoSteps = gsap.utils.toArray(".ph-flow__step, .home-eco-step");
       gsap.set(ecoSteps, { opacity: 0, y: 28 });
       ecoSteps.forEach(function (step, i) {
         gsap.to(step, {
