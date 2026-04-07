@@ -48,7 +48,7 @@
     var pillar = document.querySelector(".hero-swiper.ph-pillar-swiper");
     var swOpts = {
       loop: true,
-      speed: pillar ? 550 : 900,
+      speed: pillar ? 720 : 900,
       effect: pillar ? "slide" : "fade",
       autoplay: pillar
         ? {
@@ -196,6 +196,27 @@
           end: "bottom top",
           scrub: true,
         },
+      });
+    }
+
+    /* Homepage service banner — parallax photo layers on scroll */
+    var pillarBand = document.querySelector(".ph-pillar-band");
+    if (pillarBand && !prefersReduced) {
+      gsap.utils.toArray(".ph-banner-parallax").forEach(function (wrap) {
+        gsap.fromTo(
+          wrap,
+          { yPercent: -4 },
+          {
+            yPercent: 4,
+            ease: "none",
+            scrollTrigger: {
+              trigger: pillarBand,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1.15,
+            },
+          }
+        );
       });
     }
   }
