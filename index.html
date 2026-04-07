@@ -21,7 +21,7 @@
   <header class="site-header ph-header" id="siteHeader">
     <div class="nav-inner ph-nav-inner">
       <a href="index.html#home" class="logo logo--brand">
-        <img src="assets/logo-cs-deveelopers.png?v=6" alt="CS Developers" class="logo__img" width="200" height="120" onerror="this.onerror=null;this.src='assets/logo-cs-deveelopers.svg'" />
+        <img src="assets/logo-cs-deveelopers.png?v=6" alt="CS Developers" class="logo__img" width="280" height="168" onerror="this.onerror=null;this.src='assets/logo-cs-deveelopers.svg'" />
       </a>
       <button class="nav-toggle ph-nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -121,7 +121,7 @@
             <span class="ph-bento-card__cta">View projects →</span>
           </a>
 
-          <a href="index.html#earn" class="ph-bento-card ph-bento-card--wide ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="80">
+          <a href="index.html#earn" id="services-net" class="ph-bento-card ph-bento-card--wide ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="80">
             <div class="ph-bento-card__top">
               <span class="ph-bento-card__emoji" aria-hidden="true">📈</span>
               <h3 class="ph-bento-card__name">Earn &amp; partner network</h3>
@@ -134,7 +134,7 @@
             <span class="ph-bento-card__cta">Explore earning →</span>
           </a>
 
-          <a href="index.html#services-edu" class="ph-bento-card ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="40">
+          <a href="index.html#contact" id="services-edu" class="ph-bento-card ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="40">
             <span class="ph-bento-card__emoji" aria-hidden="true">🎓</span>
             <h3 class="ph-bento-card__name">Study abroad</h3>
             <p class="ph-bento-card__desc">USA · UK · Canada · Australia—applications &amp; visas.</p>
@@ -145,7 +145,7 @@
             <span class="ph-bento-card__cta">Learn more →</span>
           </a>
 
-          <a href="index.html#services-ev" class="ph-bento-card ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="100">
+          <a href="index.html#contact" id="services-ev" class="ph-bento-card ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="100">
             <span class="ph-bento-card__emoji" aria-hidden="true">⚡</span>
             <h3 class="ph-bento-card__name">EV mobility</h3>
             <p class="ph-bento-card__desc">E-bikes &amp; electric two-wheelers—economy to premium.</p>
@@ -156,7 +156,7 @@
             <span class="ph-bento-card__cta">Enquire →</span>
           </a>
 
-          <a href="index.html#services-fin" class="ph-bento-card ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="160">
+          <a href="index.html#contact" id="services-fin" class="ph-bento-card ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="160">
             <span class="ph-bento-card__emoji" aria-hidden="true">🛡️</span>
             <h3 class="ph-bento-card__name">Financial services</h3>
             <p class="ph-bento-card__desc">HDFC insurance partner network &amp; structured investment-linked options.</p>
@@ -191,7 +191,7 @@
             <p class="ph-decision-card__text">Plots, apartments, farmland, and curated Bangalore projects.</p>
             <span class="ph-decision-card__link">View projects →</span>
           </a>
-          <a href="index.html#services" class="ph-decision-card ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="160">
+          <a href="index.html#bento-services" class="ph-decision-card ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="160">
             <span class="ph-decision-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 32V16l8-4 8 4v16"/><path d="M12 20h16M12 26h10"/></svg></span>
             <h3 class="ph-decision-card__title">Invest</h3>
             <p class="ph-decision-card__text">Structured opportunities with transparency and ongoing support.</p>
@@ -207,98 +207,91 @@
       </div>
     </section>
 
-    <!-- Pillar carousel (previous full-hero slides — contained “BrightHub” band) -->
+    <!-- Sliding banner — minimal gradients (no heavy photos) -->
     <section class="section-ph ph-pillar-band" id="pillars" aria-label="Explore every pillar">
       <div class="container">
         <header class="ph-pillar-band__head" data-aos="fade-up">
-          <p class="ph-pill ph-pill--dark">Swipe</p>
+          <p class="ph-pill ph-pill--dark">Highlights</p>
           <h2 class="ph-pillar-band__title">Seven ways we help you earn, invest &amp; grow</h2>
-          <p class="ph-pillar-band__sub">Same stories as before—now in a focused strip so the page stays calm.</p>
+          <p class="ph-pillar-band__sub">Clean slides that rotate automatically—tap arrows or dots to browse.</p>
         </header>
         <div class="ph-pillar-band__shell" data-aos="fade-up">
           <div class="swiper hero-swiper ph-pillar-swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg parallax-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=2560&amp;q=90');"></div>
-                <div class="hero-overlay ph-hero-overlay"></div>
+              <div class="swiper-slide hero-slide ph-min-slide">
+                <div class="ph-min-slide__bg ph-min-slide__bg--1" aria-hidden="true"></div>
                 <div class="container hero-slide-inner">
-                  <div class="hero-content">
+                  <div class="hero-content ph-min-slide__content">
                     <p class="hero-eyebrow">Real Estate</p>
                     <h2 class="hero-title hero-title--main">Property that fits your ambition</h2>
                     <p class="hero-sub">Plots, apartments, and farmland in growth corridors—plus Bangalore-region projects.</p>
-                    <div class="hero-actions"><a href="projects.html" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-light">Enquire</a></div>
+                    <div class="hero-actions"><a href="projects.html" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-dark">Enquire</a></div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg parallax-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=2560&amp;q=90');"></div>
-                <div class="hero-overlay ph-hero-overlay"></div>
+              <div class="swiper-slide hero-slide ph-min-slide">
+                <div class="ph-min-slide__bg ph-min-slide__bg--2" aria-hidden="true"></div>
                 <div class="container hero-slide-inner">
-                  <div class="hero-content">
+                  <div class="hero-content ph-min-slide__content">
                     <p class="hero-eyebrow">Investment</p>
                     <h2 class="hero-title hero-title--main">Invest with structure</h2>
                     <p class="hero-sub">Curated opportunities, clear documentation, and steady communication.</p>
-                    <div class="hero-actions"><a href="index.html#contact" class="btn btn-primary ph-btn-primary">Enquire</a><a href="index.html#services" class="btn btn-outline-light">Learn more</a></div>
+                    <div class="hero-actions"><a href="index.html#contact" class="btn btn-primary ph-btn-primary">Enquire</a><a href="index.html#bento-services" class="btn btn-outline-dark">Learn more</a></div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg parallax-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=2560&amp;q=90');"></div>
-                <div class="hero-overlay ph-hero-overlay"></div>
+              <div class="swiper-slide hero-slide ph-min-slide">
+                <div class="ph-min-slide__bg ph-min-slide__bg--3" aria-hidden="true"></div>
                 <div class="container hero-slide-inner">
-                  <div class="hero-content">
+                  <div class="hero-content ph-min-slide__content">
                     <p class="hero-eyebrow">Education</p>
                     <h2 class="hero-title hero-title--main">Study abroad, guided end-to-end</h2>
                     <p class="hero-sub">USA, UK, Canada &amp; Australia—applications, visas, and counselling.</p>
-                    <div class="hero-actions"><a href="index.html#services-edu" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-light">Enquire</a></div>
+                    <div class="hero-actions"><a href="index.html#services-edu" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-dark">Enquire</a></div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg parallax-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&amp;fit=crop&amp;w=2560&amp;q=90');"></div>
-                <div class="hero-overlay ph-hero-overlay"></div>
+              <div class="swiper-slide hero-slide ph-min-slide">
+                <div class="ph-min-slide__bg ph-min-slide__bg--4" aria-hidden="true"></div>
                 <div class="container hero-slide-inner">
-                  <div class="hero-content">
+                  <div class="hero-content ph-min-slide__content">
                     <p class="hero-eyebrow">EV Business</p>
                     <h2 class="hero-title hero-title--main">Electric mobility for every segment</h2>
                     <p class="hero-sub">From everyday e-bikes to premium electric two-wheelers.</p>
-                    <div class="hero-actions"><a href="index.html#services-ev" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-light">Enquire</a></div>
+                    <div class="hero-actions"><a href="index.html#services-ev" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-dark">Enquire</a></div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg parallax-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&amp;fit=crop&amp;w=2560&amp;q=90');"></div>
-                <div class="hero-overlay ph-hero-overlay"></div>
+              <div class="swiper-slide hero-slide ph-min-slide">
+                <div class="ph-min-slide__bg ph-min-slide__bg--5" aria-hidden="true"></div>
                 <div class="container hero-slide-inner">
-                  <div class="hero-content">
+                  <div class="hero-content ph-min-slide__content">
                     <p class="hero-eyebrow">Financial Services</p>
                     <h2 class="hero-title hero-title--main">Protect and grow what matters</h2>
                     <p class="hero-sub">Insurance and investment-linked solutions through our authorised network.</p>
-                    <div class="hero-actions"><a href="index.html#services-fin" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-light">Enquire</a></div>
+                    <div class="hero-actions"><a href="index.html#services-fin" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-dark">Enquire</a></div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg parallax-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&amp;fit=crop&amp;w=2560&amp;q=90');"></div>
-                <div class="hero-overlay ph-hero-overlay"></div>
+              <div class="swiper-slide hero-slide ph-min-slide">
+                <div class="ph-min-slide__bg ph-min-slide__bg--6" aria-hidden="true"></div>
                 <div class="container hero-slide-inner">
-                  <div class="hero-content">
+                  <div class="hero-content ph-min-slide__content">
                     <p class="hero-eyebrow">Network Business</p>
                     <h2 class="hero-title hero-title--main">A global partner network</h2>
                     <p class="hero-sub">Tiens BCM wellness &amp; direct selling—income paths for partners.</p>
-                    <div class="hero-actions"><a href="index.html#services-net" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-light">Enquire</a></div>
+                    <div class="hero-actions"><a href="index.html#services-net" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-dark">Enquire</a></div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg parallax-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=2560&amp;q=90');"></div>
-                <div class="hero-overlay ph-hero-overlay"></div>
+              <div class="swiper-slide hero-slide ph-min-slide">
+                <div class="ph-min-slide__bg ph-min-slide__bg--7" aria-hidden="true"></div>
                 <div class="container hero-slide-inner">
-                  <div class="hero-content">
+                  <div class="hero-content ph-min-slide__content">
                     <p class="hero-eyebrow">Training</p>
                     <h2 class="hero-title hero-title--main">Training that wins in the field</h2>
                     <p class="hero-sub">Sales, AI marketing, and real field exposure—execute with confidence.</p>
-                    <div class="hero-actions"><a href="index.html#earn" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-light">Join us</a></div>
+                    <div class="hero-actions"><a href="index.html#earn" class="btn btn-primary ph-btn-primary">Explore</a><a href="index.html#contact" class="btn btn-outline-dark">Join us</a></div>
                   </div>
                 </div>
               </div>
@@ -311,86 +304,25 @@
       </div>
     </section>
 
-    <!-- 3. Ecosystem flow -->
-    <section class="section-ph ph-flow" id="flow" aria-labelledby="flow-title">
+    <!-- Live stats (replaces “journey in one line”) -->
+    <section class="section-ph ph-stats" id="stats" aria-labelledby="stats-title">
       <div class="container">
-        <header class="ph-section-head ph-section-head--dark" data-aos="fade-up">
-          <p class="ph-eyebrow ph-eyebrow--on-dark">How it works</p>
-          <h2 id="flow-title" class="ph-section-title">Your journey in one line</h2>
-        </header>
-        <div class="ph-flow__track" data-eco-flow>
-          <div class="ph-flow__step ph-tilt tilt-card" data-tilt data-aos="zoom-in">
-            <span class="ph-flow__icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 8v24M12 16h16M8 32h24"/></svg></span>
-            <span class="ph-flow__label">Join</span>
-          </div>
-          <span class="ph-flow__arrow" aria-hidden="true">→</span>
-          <div class="ph-flow__step ph-tilt tilt-card" data-tilt data-aos="zoom-in" data-aos-delay="60">
-            <span class="ph-flow__icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 28V12l12-6 12 6v16"/><path d="M14 18h12"/></svg></span>
-            <span class="ph-flow__label">Learn</span>
-          </div>
-          <span class="ph-flow__arrow" aria-hidden="true">→</span>
-          <div class="ph-flow__step ph-tilt tilt-card" data-tilt data-aos="zoom-in" data-aos-delay="120">
-            <span class="ph-flow__icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 24c4-8 8-12 12-12s8 4 12 12"/><path d="M20 12v8"/></svg></span>
-            <span class="ph-flow__label">Earn</span>
-          </div>
-          <span class="ph-flow__arrow" aria-hidden="true">→</span>
-          <div class="ph-flow__step ph-tilt tilt-card" data-tilt data-aos="zoom-in" data-aos-delay="180">
-            <span class="ph-flow__icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 32V16l6-4 6 4 6-4 6 4v16"/><path d="M14 24h12"/></svg></span>
-            <span class="ph-flow__label">Invest</span>
-          </div>
-          <span class="ph-flow__arrow" aria-hidden="true">→</span>
-          <div class="ph-flow__step ph-tilt tilt-card" data-tilt data-aos="zoom-in" data-aos-delay="240">
-            <span class="ph-flow__icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 28l8-16 8 10 8-14"/><circle cx="32" cy="12" r="3"/></svg></span>
-            <span class="ph-flow__label">Grow</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Services by category -->
-    <section class="section-ph ph-services" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <header class="ph-section-head" data-aos="fade-up">
-          <p class="ph-eyebrow">Services</p>
-          <h2 id="services-title" class="ph-section-title">Everything in one ecosystem</h2>
-          <p class="ph-section-lead">Grouped so you always know where to look.</p>
-        </header>
-
-        <div class="ph-cat" data-aos="fade-up">
-          <h3 class="ph-cat__title"><span class="ph-cat__letter">A</span> Real Estate</h3>
-          <div class="ph-cat__grid">
-            <a href="projects.html" class="ph-mini-card ph-tilt tilt-card" data-tilt><span class="ph-mini-card__tag">Land</span><strong>Open plots</strong><span class="ph-mini-card__hint">Growth corridors</span></a>
-            <a href="projects.html" class="ph-mini-card ph-tilt tilt-card" data-tilt><span class="ph-mini-card__tag">Homes</span><strong>Apartments</strong><span class="ph-mini-card__hint">Gated communities</span></a>
-            <a href="projects.html" class="ph-mini-card ph-tilt tilt-card" data-tilt><span class="ph-mini-card__tag">Hold</span><strong>Farmland</strong><span class="ph-mini-card__hint">Long-term value</span></a>
-          </div>
-        </div>
-
-        <div class="ph-cat" id="services-ev" data-aos="fade-up">
-          <h3 class="ph-cat__title"><span class="ph-cat__letter">B</span> EV Business</h3>
-          <div class="ph-cat__grid ph-cat__grid--single">
-            <a href="index.html#contact" class="ph-mini-card ph-tilt tilt-card" data-tilt><span class="ph-mini-card__tag">Mobility</span><strong>Electric bikes</strong><span class="ph-mini-card__hint">Economy to premium segments</span></a>
-          </div>
-        </div>
-
-        <div class="ph-cat" id="services-edu" data-aos="fade-up">
-          <h3 class="ph-cat__title"><span class="ph-cat__letter">C</span> Education</h3>
-          <div class="ph-cat__grid ph-cat__grid--single">
-            <a href="index.html#contact" class="ph-mini-card ph-tilt tilt-card" data-tilt><span class="ph-mini-card__tag">Global</span><strong>Study abroad</strong><span class="ph-mini-card__hint">USA · UK · Canada · Australia</span></a>
-          </div>
-        </div>
-
-        <div class="ph-cat" id="services-fin" data-aos="fade-up">
-          <h3 class="ph-cat__title"><span class="ph-cat__letter">D</span> Financial Services</h3>
-          <div class="ph-cat__grid">
-            <a href="index.html#contact" class="ph-mini-card ph-tilt tilt-card" data-tilt><span class="ph-mini-card__tag">Protect</span><strong>Insurance</strong><span class="ph-mini-card__hint">HDFC partner network</span></a>
-            <a href="index.html#contact" class="ph-mini-card ph-tilt tilt-card" data-tilt><span class="ph-mini-card__tag">Grow</span><strong>Investment plans</strong><span class="ph-mini-card__hint">Structured options</span></a>
-          </div>
-        </div>
-
-        <div class="ph-cat" id="services-net" data-aos="fade-up">
-          <h3 class="ph-cat__title"><span class="ph-cat__letter">E</span> Network Business</h3>
-          <div class="ph-cat__grid ph-cat__grid--single">
-            <a href="index.html#contact" class="ph-mini-card ph-tilt tilt-card" data-tilt><span class="ph-mini-card__tag">Partner</span><strong>Tiens BCM</strong><span class="ph-mini-card__hint">Wellness &amp; network income</span></a>
+        <h2 id="stats-title" class="visually-hidden">CS Developers at a glance</h2>
+        <div class="ph-stats__card" data-aos="zoom-in">
+          <div class="ph-stats__glow" aria-hidden="true"></div>
+          <div class="ph-stats__grid">
+            <div class="ph-stats__item">
+              <p class="ph-stats__value"><span class="counter" data-target="1000">0</span><span class="ph-stats__suffix">+</span></p>
+              <p class="ph-stats__label">Active Agents</p>
+            </div>
+            <div class="ph-stats__item">
+              <p class="ph-stats__value"><span class="counter" data-target="3">0</span></p>
+              <p class="ph-stats__label">States Covered</p>
+            </div>
+            <div class="ph-stats__item">
+              <p class="ph-stats__value"><span class="counter" data-target="30">0</span><span class="ph-stats__suffix">+</span></p>
+              <p class="ph-stats__label">Years Leadership</p>
+            </div>
           </div>
         </div>
       </div>
@@ -493,7 +425,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="index.html#home" class="logo footer-logo logo--brand">
-          <img src="assets/logo-cs-deveelopers.png?v=6" alt="CS Developers" class="logo__img" width="180" height="108" onerror="this.onerror=null;this.src='assets/logo-cs-deveelopers.svg'" />
+          <img src="assets/logo-cs-deveelopers.png?v=6" alt="CS Developers" class="logo__img" width="240" height="144" onerror="this.onerror=null;this.src='assets/logo-cs-deveelopers.svg'" />
         </a>
         <p>Earn, invest, and grow—one ecosystem for property, partners, and progress.</p>
       </div>

@@ -43,18 +43,24 @@
     });
   }
 
-  /* Swiper — Hero */
+  /* Swiper — homepage pillar band (minimal slides + live sliding) */
   if (document.querySelector(".hero-swiper") && typeof Swiper !== "undefined") {
-    new Swiper(".hero-swiper", {
+    var pillar = document.querySelector(".hero-swiper.ph-pillar-swiper");
+    var swOpts = {
       loop: true,
-      speed: 900,
-      effect: "fade",
-      fadeEffect: { crossFade: true },
-      autoplay: {
-        delay: 7200,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
+      speed: pillar ? 550 : 900,
+      effect: pillar ? "slide" : "fade",
+      autoplay: pillar
+        ? {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }
+        : {
+            delay: 7200,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
       pagination: {
         el: ".hero-pagination",
         clickable: true,
@@ -64,7 +70,11 @@
         nextEl: ".hero-swiper .swiper-button-next",
         prevEl: ".hero-swiper .swiper-button-prev",
       },
-    });
+    };
+    if (!pillar) {
+      swOpts.fadeEffect = { crossFade: true };
+    }
+    new Swiper(".hero-swiper", swOpts);
   }
 
   /* Swiper — Project detail gallery + thumbs */
