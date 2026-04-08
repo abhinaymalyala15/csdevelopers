@@ -45,14 +45,10 @@
 
   /* Swiper — homepage hero service image carousel */
   if (document.querySelector(".ph-hero-swiper") && typeof Swiper !== "undefined") {
-    new Swiper(".ph-hero-swiper", {
+    var immersiveHero = document.querySelector(".ph-hero-swiper--immersive");
+    var heroSwiperOpts = {
       loop: true,
-      speed: 650,
-      autoplay: {
-        delay: 3800,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
+      speed: immersiveHero ? 900 : 650,
       pagination: {
         el: ".ph-hero-pagination",
         clickable: true,
@@ -62,7 +58,19 @@
         nextEl: ".ph-hero-nav-next",
         prevEl: ".ph-hero-nav-prev",
       },
-    });
+    };
+    if (immersiveHero) {
+      heroSwiperOpts.effect = "fade";
+      heroSwiperOpts.fadeEffect = { crossFade: true };
+    }
+    if (!prefersReduced) {
+      heroSwiperOpts.autoplay = {
+        delay: immersiveHero ? 4200 : 3800,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      };
+    }
+    new Swiper(".ph-hero-swiper", heroSwiperOpts);
   }
 
   /* Swiper — Project detail gallery + thumbs */
