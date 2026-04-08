@@ -43,38 +43,26 @@
     });
   }
 
-  /* Swiper — homepage pillar band (minimal slides + live sliding) */
-  if (document.querySelector(".hero-swiper") && typeof Swiper !== "undefined") {
-    var pillar = document.querySelector(".hero-swiper.ph-pillar-swiper");
-    var swOpts = {
+  /* Swiper — homepage hero service image carousel */
+  if (document.querySelector(".ph-hero-swiper") && typeof Swiper !== "undefined") {
+    new Swiper(".ph-hero-swiper", {
       loop: true,
-      speed: pillar ? 720 : 900,
-      effect: pillar ? "slide" : "fade",
-      autoplay: pillar
-        ? {
-            delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }
-        : {
-            delay: 7200,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          },
+      speed: 650,
+      autoplay: {
+        delay: 3800,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       pagination: {
-        el: ".hero-pagination",
+        el: ".ph-hero-pagination",
         clickable: true,
-        dynamicBullets: false,
+        dynamicBullets: true,
       },
       navigation: {
-        nextEl: ".hero-swiper .swiper-button-next",
-        prevEl: ".hero-swiper .swiper-button-prev",
+        nextEl: ".ph-hero-nav-next",
+        prevEl: ".ph-hero-nav-prev",
       },
-    };
-    if (!pillar) {
-      swOpts.fadeEffect = { crossFade: true };
-    }
-    new Swiper(".hero-swiper", swOpts);
+    });
   }
 
   /* Swiper — Project detail gallery + thumbs */
@@ -199,26 +187,6 @@
       });
     }
 
-    /* Homepage service banner — parallax photo layers on scroll */
-    var pillarBand = document.querySelector(".ph-pillar-band");
-    if (pillarBand && !prefersReduced) {
-      gsap.utils.toArray(".ph-banner-parallax").forEach(function (wrap) {
-        gsap.fromTo(
-          wrap,
-          { yPercent: -4 },
-          {
-            yPercent: 4,
-            ease: "none",
-            scrollTrigger: {
-              trigger: pillarBand,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 1.15,
-            },
-          }
-        );
-      });
-    }
   }
 
   function animateValue(el, target, duration) {

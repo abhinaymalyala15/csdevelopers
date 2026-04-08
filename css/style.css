@@ -5142,6 +5142,156 @@ body.page-home {
   padding: 12px 24px;
 }
 
+/* Hero — live sliding service images */
+.ph-hero-carousel {
+  width: 100%;
+  max-width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.ph-hero-carousel__shell {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #020617;
+  box-shadow:
+    0 4px 6px rgba(2, 6, 23, 0.12),
+    0 24px 56px rgba(2, 6, 23, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  transform: perspective(1400px) translateZ(0);
+}
+
+.ph-hero-swiper {
+  width: 100%;
+  min-height: min(340px, 52vw);
+}
+
+.ph-hero-slide {
+  position: relative;
+  min-height: min(340px, 52vw);
+  overflow: hidden;
+}
+
+.ph-hero-slide__bg {
+  position: absolute;
+  inset: -4%;
+  background-size: cover;
+  background-position: center;
+}
+
+.ph-hero-swiper .swiper-slide-active .ph-hero-slide__bg {
+  animation: ph-hero-ken 10s ease-in-out infinite alternate;
+}
+
+@keyframes ph-hero-ken {
+  0% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ph-hero-swiper .swiper-slide-active .ph-hero-slide__bg {
+    animation: none;
+  }
+}
+
+.ph-hero-slide__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.2) 0%,
+    rgba(15, 23, 42, 0.45) 45%,
+    rgba(2, 6, 23, 0.88) 100%
+  );
+}
+
+.ph-hero-slide__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: clamp(1.25rem, 4vw, 2.25rem) clamp(1rem, 3vw, 1.5rem);
+  text-align: center;
+}
+
+.ph-hero-slide__tag {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 0.4rem;
+}
+
+.ph-hero-slide__line {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.8vw, 1.65rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+.page-home .ph-hero-swiper .swiper-button-prev,
+.page-home .ph-hero-swiper .swiper-button-next {
+  width: 44px;
+  height: 44px;
+  margin-top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.page-home .ph-hero-swiper .swiper-button-prev::after,
+.page-home .ph-hero-swiper .swiper-button-next::after {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.page-home .ph-hero-swiper .swiper-button-prev:hover,
+.page-home .ph-hero-swiper .swiper-button-next:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(147, 197, 253, 0.5);
+}
+
+.page-home .ph-hero-swiper .ph-hero-pagination.swiper-pagination-bullets {
+  bottom: 14px !important;
+}
+
+.page-home .ph-hero-swiper .ph-hero-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+
+.page-home .ph-hero-swiper .ph-hero-pagination .swiper-pagination-bullet-active {
+  width: 22px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 0 16px rgba(147, 197, 253, 0.7);
+}
+
+@media (max-width: 640px) {
+  .page-home .ph-hero-swiper .swiper-button-prev,
+  .page-home .ph-hero-swiper .swiper-button-next {
+    display: none;
+  }
+}
+
 .ph-bento-hero__visual {
   perspective: 1200px;
   max-width: 720px;
@@ -5417,6 +5567,124 @@ body.page-home {
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--ph-red);
+}
+
+/* Ecosystem cards — luxury 3D variant */
+.ph-bento__grid--lux {
+  gap: clamp(18px, 2.5vw, 26px);
+}
+
+.ph-bento-card--lux {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 !important;
+  overflow: hidden;
+  border-radius: 26px !important;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow:
+    0 2px 4px rgba(2, 6, 23, 0.04),
+    0 16px 40px rgba(15, 23, 42, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
+  transform-style: preserve-3d;
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s, border-color 0.45s !important;
+}
+
+.ph-bento-card--lux::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.35), rgba(15, 23, 42, 0.08), rgba(59, 130, 246, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.ph-bento-card--lux:hover::before {
+  opacity: 1;
+}
+
+.ph-bento-card--lux:hover {
+  transform: translateY(-10px) rotateX(2deg) !important;
+  box-shadow:
+    0 8px 16px rgba(2, 6, 23, 0.08),
+    0 28px 56px rgba(29, 78, 216, 0.18),
+    0 0 0 1px rgba(59, 130, 246, 0.15) inset !important;
+  border-color: rgba(29, 78, 216, 0.25) !important;
+}
+
+.ph-bento-card__media {
+  height: clamp(120px, 18vw, 160px);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.ph-bento-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.ph-bento-card__shine {
+  position: absolute;
+  top: -40%;
+  right: -30%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent 65%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.ph-bento-card--lux:hover .ph-bento-card__shine {
+  opacity: 1;
+}
+
+.ph-bento-card__body {
+  position: relative;
+  z-index: 2;
+  padding: clamp(18px, 3vw, 24px) clamp(20px, 3vw, 26px) clamp(22px, 3vw, 28px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+}
+
+.ph-bento-card--lux .ph-bento-card__icon-ring {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  background: linear-gradient(145deg, rgba(29, 78, 216, 0.12), rgba(59, 130, 246, 0.06));
+  border: 1px solid rgba(29, 78, 216, 0.15);
+  color: var(--ph-red);
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.12);
+}
+
+.ph-bento-card__icon-ring svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ph-bento-card--lux .ph-bento-card__name {
+  margin-top: 0;
+}
+
+.ph-bento-card--lux .ph-bento-card__mock {
+  margin-bottom: 14px;
 }
 
 .ph-mock--property {
