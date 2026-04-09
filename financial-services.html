@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/financial-services-page.css" />
 </head>
 <body class="page-financial-services">
@@ -17,36 +18,26 @@
     <span class="whatsapp-pulse"></span>
   </a>
 
-  <nav id="mainNav">
-    <div class="container">
-      <div class="nav-inner">
-        <a class="logo" href="index.html">CS <span>Developers</span></a>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#partner">Partners</a></li>
-          <li><a href="#why">Why Us</a></li>
+  <header class="site-header ph-header" id="siteHeader">
+    <div class="nav-inner ph-nav-inner">
+      <a href="index.html#home" class="logo logo--brand">
+        <img src="assets/logo-cs-deveelopers.png?v=6" alt="CS Developers" class="logo__img" width="280" height="168" onerror="this.onerror=null;this.src='assets/logo-cs-deveelopers.svg'" />
+      </a>
+      <button class="nav-toggle ph-nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav ph-main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#decision">Start here</a></li>
+          <li><a href="index.html#bento-services">Ecosystem</a></li>
           <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="nav-cta ph-nav-cta">Contact</a></li>
         </ul>
-        <div class="nav-cta">
-          <a href="contact.html" class="btn btn-primary" style="padding:10px 22px;font-size:.84rem;">Book Consultation</a>
-        </div>
-        <button class="nav-menu-btn" type="button" id="menuBtn" aria-label="Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      </nav>
     </div>
-    <div class="mobile-nav" id="mobileNav">
-      <a href="index.html">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#partner">Partners</a>
-      <a href="#why">Why Us</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Book Consultation</a>
-    </div>
-  </nav>
+  </header>
 
   <section class="hero" id="home">
     <div class="hero-bg-decor">
@@ -196,7 +187,7 @@
           </div>
           <h3 class="sc-title">Life &amp; Health Insurance</h3>
           <p class="sc-desc">Comprehensive coverage plans that protect your loved ones financially and safeguard your health at every stage of life — with flexible premiums and maximum benefits.</p>
-          <a href="#cta" class="sc-link">Explore Plans
+          <a href="contact.html" class="sc-link">Explore Plans
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -206,7 +197,7 @@
           </div>
           <h3 class="sc-title">Investment-Linked Products</h3>
           <p class="sc-desc">Unit-linked insurance plans (ULIPs) that blend the dual power of market-linked investment returns with life coverage — building wealth while staying protected.</p>
-          <a href="#cta" class="sc-link">See Products
+          <a href="contact.html" class="sc-link">See Products
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -216,7 +207,7 @@
           </div>
           <h3 class="sc-title">Wealth Protection Plans</h3>
           <p class="sc-desc">Long-term saving and legacy planning solutions — including endowment and term plans — designed to preserve wealth and ensure financial security across generations.</p>
-          <a href="#cta" class="sc-link">Learn More
+          <a href="contact.html" class="sc-link">Learn More
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -396,8 +387,8 @@
           <div class="section-label" style="display:inline-block;margin-bottom:16px;">Get Started Today</div>
           <h2 class="cta-title">Protect Your <span>Future</span> Today</h2>
           <p class="cta-desc">Take the first step toward financial security. A free, no-obligation consultation with our expert advisors — tailored specifically to your life goals.</p>
-          <a href="mailto:info@csdeveelopers.com" class="btn btn-green" style="font-size:1rem;padding:16px 36px;">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9a8 8 0 0 1-8.3 2.1L8 22l3-5.7A8 8 0 1 1 22 16.9z"/></svg>
+          <a href="contact.html" class="btn btn-green" style="font-size:1rem;padding:16px 36px;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             Book Free Consultation
           </a>
           <div class="cta-trust">

@@ -46,9 +46,10 @@
   /* Swiper — homepage hero service image carousel */
   if (document.querySelector(".ph-hero-swiper") && typeof Swiper !== "undefined") {
     var immersiveHero = document.querySelector(".ph-hero-swiper--immersive");
+    var splitHero = document.querySelector(".ph-hero-swiper--split");
     var heroSwiperOpts = {
       loop: true,
-      speed: immersiveHero ? 900 : 650,
+      speed: immersiveHero ? 900 : splitHero ? 600 : 650,
       pagination: {
         el: ".ph-hero-pagination",
         clickable: true,
@@ -59,13 +60,18 @@
         prevEl: ".ph-hero-nav-prev",
       },
     };
+    /* Fade only on full-bleed immersive hero. Split layout uses slide — avoids black/empty slides + overlap bugs. */
     if (immersiveHero) {
       heroSwiperOpts.effect = "fade";
       heroSwiperOpts.fadeEffect = { crossFade: true };
     }
+    if (splitHero) {
+      heroSwiperOpts.slidesPerView = 1;
+      heroSwiperOpts.spaceBetween = 0;
+    }
     if (!prefersReduced) {
       heroSwiperOpts.autoplay = {
-        delay: immersiveHero ? 4200 : 3800,
+        delay: immersiveHero ? 4200 : splitHero ? 4000 : 3800,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       };

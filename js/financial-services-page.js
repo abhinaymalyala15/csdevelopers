@@ -1,34 +1,41 @@
 (function () {
   "use strict";
 
-  var nav = document.getElementById("mainNav");
-  var menuBtn = document.getElementById("menuBtn");
-  var mobileNav = document.getElementById("mobileNav");
+  var header = document.getElementById("siteHeader");
+  var navToggle = document.querySelector(".page-financial-services .nav-toggle");
+  var mainNav = document.querySelector(".page-financial-services .main-nav");
   var yearEl = document.getElementById("fsYear");
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  if (nav) {
-    window.addEventListener(
-      "scroll",
-      function () {
-        nav.classList.toggle("scrolled", window.scrollY > 20);
-      },
-      { passive: true }
-    );
+  function onScrollHeader() {
+    if (!header) return;
+    if (window.scrollY > 40) {
+      header.classList.add("is-scrolled");
+    } else {
+      header.classList.remove("is-scrolled");
+    }
   }
 
-  if (menuBtn && mobileNav) {
-    menuBtn.addEventListener("click", function () {
-      var open = mobileNav.classList.toggle("open");
-      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  window.addEventListener("scroll", onScrollHeader, { passive: true });
+  onScrollHeader();
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", function () {
+      var open = mainNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      document.body.classList.toggle("nav-open", open);
     });
-    mobileNav.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        mobileNav.classList.remove("open");
-        menuBtn.setAttribute("aria-expanded", "false");
+
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Open menu");
+        document.body.classList.remove("nav-open");
       });
     });
   }
