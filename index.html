@@ -86,13 +86,14 @@
           <button type="button" class="swiper-button-next ph-hero-nav-next" aria-label="Next service"></button>
         </div>
         <div class="ph-hero-immersive__content">
-          <div class="container ph-hero-immersive__inner">
+          <!-- UI: subtle radial glow via ::before in CSS -->
+          <div class="container ph-hero-immersive__inner ph-hero-immersive__inner--stagger">
             <a href="index.html#decision" class="ph-pill ph-pill--on-hero"><span class="ph-pill__dot"></span> One platform · Earn · Invest · Grow →</a>
-            <h1 id="bento-hero-title" class="ph-bento-hero__title ph-bento-hero__title--on-photo">All-in-one ecosystem for modern <span class="ph-bento-hero__accent">builders &amp; buyers</span></h1>
+            <h1 id="bento-hero-title" class="ph-bento-hero__title ph-bento-hero__title--on-photo">All-in-one ecosystem for modern <span class="ph-bento-hero__accent ph-bento-hero__accent--gradient">builders &amp; buyers</span></h1>
             <p class="ph-bento-hero__lead ph-bento-hero__lead--on-photo">Property, investments, study abroad, EV, insurance, and partner income—organized so visitors pick a path instead of scrolling a random list.</p>
             <div class="ph-bento-hero__cta ph-bento-hero__cta--on-photo">
               <a href="index.html#decision" class="btn btn-primary ph-btn-primary">Start here</a>
-              <a href="index.html#contact" class="btn btn-outline-light">Contact</a>
+              <a href="index.html#contact" class="btn btn-outline-light ph-btn-hero-glass">Contact</a>
             </div>
           </div>
         </div>
@@ -102,11 +103,20 @@
     <!-- Trust strip -->
     <section class="ph-trust" aria-label="Trust indicators">
       <div class="container ph-trust__inner">
-        <div class="ph-trust__item"><span class="ph-trust__star" aria-hidden="true">★</span> Trusted execution across <strong>South India</strong></div>
+        <div class="ph-trust__item" data-aos="fade-up" data-aos-delay="0">
+          <span class="ph-trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 17.8 5.7 21l2.3-7-6-4.6h7.6L12 2z"/></svg></span>
+          <span>Trusted execution across <strong>South India</strong></span>
+        </div>
         <div class="ph-trust__divider" aria-hidden="true"></div>
-        <div class="ph-trust__item"><strong>1000+</strong> field partners &amp; agents</div>
+        <div class="ph-trust__item" data-aos="fade-up" data-aos-delay="80">
+          <span class="ph-trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></span>
+          <span><strong>1000+</strong> field partners &amp; agents</span>
+        </div>
         <div class="ph-trust__divider" aria-hidden="true"></div>
-        <div class="ph-trust__item">Property · Finance · Education · <strong>One team</strong></div>
+        <div class="ph-trust__item" data-aos="fade-up" data-aos-delay="160">
+          <span class="ph-trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
+          <span>Property · Finance · Education · <strong>One team</strong></span>
+        </div>
       </div>
     </section>
 
@@ -121,7 +131,9 @@
 
         <div class="ph-bento__grid ph-bento__grid--lux">
           <a href="projects.html" class="ph-bento-card ph-bento-card--lux ph-bento-card--wide ph-tilt tilt-card" data-tilt data-aos="fade-up">
-            <div class="ph-bento-card__media" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&amp;fit=crop&amp;w=1600&amp;q=85');"></div>
+            <div class="ph-bento-card__media">
+              <img class="ph-bento-card__img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1600&amp;h=900&amp;q=82" alt="Modern architecture and residential property" width="1600" height="900" loading="lazy" decoding="async" />
+            </div>
             <div class="ph-bento-card__shine" aria-hidden="true"></div>
             <div class="ph-bento-card__body">
               <span class="ph-bento-card__icon-ring" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 11h4M13 15h4M13 7h4"/></svg></span>
@@ -132,7 +144,9 @@
           </a>
 
           <a href="index.html#earn" id="services-net" class="ph-bento-card ph-bento-card--lux ph-bento-card--wide ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="80">
-            <div class="ph-bento-card__media" style="background-image:url('https://images.unsplash.com/photo-1556761175-5973e0e8d3f0?auto=format&amp;fit=crop&amp;w=1600&amp;q=85');"></div>
+            <div class="ph-bento-card__media">
+              <img class="ph-bento-card__img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=1600&amp;h=900&amp;q=82" alt="Partners collaborating and partner network" width="1600" height="900" loading="lazy" decoding="async" />
+            </div>
             <div class="ph-bento-card__shine" aria-hidden="true"></div>
             <div class="ph-bento-card__body">
               <span class="ph-bento-card__icon-ring" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18M7 16l4-14 4 10 4-6"/></svg></span>
@@ -143,7 +157,9 @@
           </a>
 
           <a href="index.html#contact" id="services-edu" class="ph-bento-card ph-bento-card--lux ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="40">
-            <div class="ph-bento-card__media" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&amp;fit=crop&amp;w=1600&amp;q=85');"></div>
+            <div class="ph-bento-card__media">
+              <img class="ph-bento-card__img" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Students studying abroad" width="1200" height="800" loading="lazy" decoding="async" />
+            </div>
             <div class="ph-bento-card__shine" aria-hidden="true"></div>
             <div class="ph-bento-card__body">
               <span class="ph-bento-card__icon-ring" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></span>
@@ -154,7 +170,9 @@
           </a>
 
           <a href="index.html#contact" id="services-ev" class="ph-bento-card ph-bento-card--lux ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="100">
-            <div class="ph-bento-card__media" style="background-image:url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&amp;fit=crop&amp;w=1600&amp;q=85');"></div>
+            <div class="ph-bento-card__media">
+              <img class="ph-bento-card__img" src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Electric two-wheeler" width="1200" height="800" loading="lazy" decoding="async" />
+            </div>
             <div class="ph-bento-card__shine" aria-hidden="true"></div>
             <div class="ph-bento-card__body">
               <span class="ph-bento-card__icon-ring" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
@@ -164,8 +182,10 @@
             </div>
           </a>
 
-          <a href="index.html#contact" id="services-fin" class="ph-bento-card ph-bento-card--lux ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="160">
-            <div class="ph-bento-card__media" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&amp;fit=crop&amp;w=1600&amp;q=85');"></div>
+          <a href="financial-services.html" id="services-fin" class="ph-bento-card ph-bento-card--lux ph-bento-card--tall ph-tilt tilt-card" data-tilt data-aos="fade-up" data-aos-delay="160">
+            <div class="ph-bento-card__media">
+              <img class="ph-bento-card__img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Financial planning meeting" width="1200" height="800" loading="lazy" decoding="async" />
+            </div>
             <div class="ph-bento-card__shine" aria-hidden="true"></div>
             <div class="ph-bento-card__body">
               <span class="ph-bento-card__icon-ring" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
