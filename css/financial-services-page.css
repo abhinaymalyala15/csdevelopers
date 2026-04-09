@@ -26,7 +26,7 @@
 
 html { scroll-behavior: smooth; }
 
-body {
+body.page-financial-services {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   color: var(--text-main);
@@ -284,9 +284,10 @@ body {
   background: #0a0a0a;
 }
 
-/* Hero */
-.hero {
+/* Hero (scoped so global style.css .hero / .hero-content rules do not constrain layout) */
+.page-financial-services .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   padding-top: clamp(108px, 22vw, 148px);
   display: flex;
   align-items: center;
@@ -295,18 +296,22 @@ body {
   background: linear-gradient(145deg, #f0f3ff 0%, var(--white) 50%, #edfbef 100%);
 }
 
-.hero-bg-decor { position: absolute; inset: 0; pointer-events: none; }
+.page-financial-services .hero .hero-content {
+  max-width: none;
+}
 
-.flow-blob {
+.page-financial-services .hero-bg-decor { position: absolute; inset: 0; pointer-events: none; }
+
+.page-financial-services .flow-blob {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
   opacity: 0.18;
 }
 
-.flow-blob-1 { width: 700px; height: 700px; background: var(--blue); top: -200px; right: -200px; animation: fs-blob-float 8s ease-in-out infinite; }
-.flow-blob-2 { width: 500px; height: 500px; background: var(--green); bottom: -150px; left: -100px; animation: fs-blob-float 10s ease-in-out infinite 2s; }
-.flow-blob-3 { width: 350px; height: 350px; background: var(--blue-light); top: 40%; left: 30%; animation: fs-blob-float 7s ease-in-out infinite 1s; }
+.page-financial-services .flow-blob-1 { width: 700px; height: 700px; background: var(--blue); top: -200px; right: -200px; animation: fs-blob-float 8s ease-in-out infinite; }
+.page-financial-services .flow-blob-2 { width: 500px; height: 500px; background: var(--green); bottom: -150px; left: -100px; animation: fs-blob-float 10s ease-in-out infinite 2s; }
+.page-financial-services .flow-blob-3 { width: 350px; height: 350px; background: var(--blue-light); top: 40%; left: 30%; animation: fs-blob-float 7s ease-in-out infinite 1s; }
 
 @keyframes fs-blob-float {
   0%, 100% { transform: scale(1) translate(0, 0); }
@@ -314,7 +319,7 @@ body {
   66% { transform: scale(0.95) translate(-15px, 15px); }
 }
 
-.hero-grid {
+.page-financial-services .hero-grid {
   position: absolute;
   inset: 0;
   background-image:
@@ -323,7 +328,7 @@ body {
   background-size: 56px 56px;
 }
 
-.flow-line {
+.page-financial-services .flow-line {
   position: absolute;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--blue), transparent);
@@ -331,16 +336,16 @@ body {
   animation: fs-flow-line 4s ease-in-out infinite;
 }
 
-.flow-line-1 { width: 400px; top: 28%; left: -100px; animation-delay: 0s; }
-.flow-line-2 { width: 300px; top: 55%; right: -50px; animation-delay: 1.5s; }
-.flow-line-3 { width: 250px; top: 72%; left: 20%; animation-delay: 0.8s; }
+.page-financial-services .flow-line-1 { width: 400px; top: 28%; left: -100px; animation-delay: 0s; }
+.page-financial-services .flow-line-2 { width: 300px; top: 55%; right: -50px; animation-delay: 1.5s; }
+.page-financial-services .flow-line-3 { width: 250px; top: 72%; left: 20%; animation-delay: 0.8s; }
 
 @keyframes fs-flow-line {
   0%, 100% { opacity: 0.12; transform: translateX(0); }
   50% { opacity: 0.24; transform: translateX(40px); }
 }
 
-.hero-inner {
+.page-financial-services .hero-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
@@ -350,16 +355,16 @@ body {
   z-index: 2;
 }
 
-.hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.page-financial-services .hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
 
-.hero-eyebrow-line {
+.page-financial-services .hero-eyebrow-line {
   width: 36px;
   height: 3px;
   background: linear-gradient(90deg, var(--blue), var(--green));
   border-radius: 2px;
 }
 
-.hero-eyebrow span {
+.page-financial-services .hero-eyebrow span {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -367,7 +372,7 @@ body {
   color: var(--blue);
 }
 
-.hero-title {
+.page-financial-services .hero-title {
   font-size: clamp(2.4rem, 5vw, 3.6rem);
   font-weight: 800;
   line-height: 1.14;
@@ -375,10 +380,10 @@ body {
   margin-bottom: 22px;
 }
 
-.hero-title em { font-style: normal; color: var(--blue); }
-.hero-title .green-word { color: var(--green); }
+.page-financial-services .hero-title em { font-style: normal; color: var(--blue); }
+.page-financial-services .hero-title .green-word { color: var(--green); }
 
-.hero-sub {
+.page-financial-services .hero-sub {
   font-size: 1rem;
   color: var(--text-muted);
   line-height: 1.82;
@@ -387,9 +392,9 @@ body {
   font-weight: 400;
 }
 
-.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.page-financial-services .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.hero-stats {
+.page-financial-services .hero-stats {
   display: flex;
   gap: 36px;
   margin-top: 50px;
@@ -397,7 +402,7 @@ body {
   border-top: 1px solid var(--border);
 }
 
-.hero-stat-num {
+.page-financial-services .hero-stat-num {
   font-size: 1.85rem;
   font-weight: 800;
   color: var(--blue);
@@ -405,16 +410,16 @@ body {
   margin-bottom: 4px;
 }
 
-.hero-stat-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+.page-financial-services .hero-stat-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
 
-.hero-visual {
+.page-financial-services .hero-visual {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hero-card-stack {
+.page-financial-services .hero-card-stack {
   position: relative;
   width: 340px;
   height: 420px;
@@ -1048,6 +1053,11 @@ body {
   padding-top: 2px;
 }
 
+.wi-content {
+  flex: 1;
+  min-width: 0;
+}
+
 .wi-title { font-weight: 700; color: var(--text-main); margin-bottom: 4px; font-size: 0.93rem; }
 .wi-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; }
 
@@ -1225,8 +1235,8 @@ footer {
 .footer-bottom a:hover { color: var(--blue-light); }
 
 @media (max-width: 960px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
+  .page-financial-services .hero-inner { grid-template-columns: 1fr; }
+  .page-financial-services .hero-visual { display: none; }
   .about-inner { grid-template-columns: 1fr; gap: 48px; }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .partner-inner { grid-template-columns: 1fr; transform: none; }
@@ -1243,5 +1253,5 @@ footer {
   .footer-top { grid-template-columns: 1fr; }
   .partner-inner { padding: 40px 28px; }
   .cta-inner { padding: 52px 28px; }
-  .hero-stats { flex-wrap: wrap; gap: 22px; }
+  .page-financial-services .hero-stats { flex-wrap: wrap; gap: 22px; }
 }
