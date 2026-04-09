@@ -8,9 +8,10 @@
   --blue-light: #6b87f9;
   --blue-pale: #eef1fe;
   --blue-mid: #d4dafd;
-  --green: #118627;
-  --green-light: #1aaa34;
-  --green-pale: #e6f5e9;
+  /* Brand gold (replaces former green accents) */
+  --gold: #c9a962;
+  --gold-light: #dfc585;
+  --gold-pale: #f4efe4;
   --bg: #ffffff;
   --text-main: #111827;
   --text-muted: #4b5563;
@@ -105,15 +106,15 @@ body.page-financial-services {
   box-shadow: var(--shadow-sm);
 }
 
-.btn-green {
-  background: linear-gradient(135deg, var(--green), var(--green-light));
-  color: #fff;
-  box-shadow: 0 6px 24px rgba(17, 134, 39, 0.3);
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: #111827;
+  box-shadow: 0 6px 24px rgba(201, 169, 98, 0.35);
 }
 
-.btn-green:hover {
+.btn-gold:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(17, 134, 39, 0.4);
+  box-shadow: 0 12px 36px rgba(201, 169, 98, 0.45);
 }
 
 .card-3d {
@@ -293,7 +294,7 @@ body.page-financial-services {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(145deg, #f0f3ff 0%, var(--white) 50%, #edfbef 100%);
+  background: linear-gradient(145deg, #f0f3ff 0%, var(--white) 52%, #faf8f4 100%);
 }
 
 .page-financial-services .hero .hero-content {
@@ -310,7 +311,7 @@ body.page-financial-services {
 }
 
 .page-financial-services .flow-blob-1 { width: 700px; height: 700px; background: var(--blue); top: -200px; right: -200px; animation: fs-blob-float 8s ease-in-out infinite; }
-.page-financial-services .flow-blob-2 { width: 500px; height: 500px; background: var(--green); bottom: -150px; left: -100px; animation: fs-blob-float 10s ease-in-out infinite 2s; }
+.page-financial-services .flow-blob-2 { width: 500px; height: 500px; background: var(--gold); bottom: -150px; left: -100px; animation: fs-blob-float 10s ease-in-out infinite 2s; }
 .page-financial-services .flow-blob-3 { width: 350px; height: 350px; background: var(--blue-light); top: 40%; left: 30%; animation: fs-blob-float 7s ease-in-out infinite 1s; }
 
 @keyframes fs-blob-float {
@@ -360,7 +361,7 @@ body.page-financial-services {
 .page-financial-services .hero-eyebrow-line {
   width: 36px;
   height: 3px;
-  background: linear-gradient(90deg, var(--blue), var(--green));
+  background: linear-gradient(90deg, var(--blue), var(--gold));
   border-radius: 2px;
 }
 
@@ -381,7 +382,7 @@ body.page-financial-services {
 }
 
 .page-financial-services .hero-title em { font-style: normal; color: var(--blue); }
-.page-financial-services .hero-title .green-word { color: var(--green); }
+.page-financial-services .hero-title .gold-word { color: var(--gold); }
 
 .page-financial-services .hero-sub {
   font-size: 1rem;
@@ -461,7 +462,7 @@ body.page-financial-services {
   transform: translate(-50%, -50%) rotateX(2deg) rotateY(-8deg) rotate(-6deg);
   z-index: 2;
   opacity: 0.7;
-  background: linear-gradient(135deg, var(--green-pale), var(--white));
+  background: linear-gradient(135deg, var(--gold-pale), var(--white));
 }
 
 @keyframes fs-card-float {
@@ -505,7 +506,7 @@ body.page-financial-services {
 .hcard-bar-fill {
   height: 100%;
   border-radius: 4px;
-  background: linear-gradient(90deg, var(--blue), var(--green));
+  background: linear-gradient(90deg, var(--blue), var(--gold));
   animation: fs-bar-anim 2s ease-out forwards;
 }
 
@@ -515,8 +516,8 @@ body.page-financial-services {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: var(--green-pale);
-  color: var(--green);
+  background: var(--gold-pale);
+  color: #8a7340;
   font-size: 0.73rem;
   font-weight: 700;
   padding: 4px 10px;
@@ -542,7 +543,7 @@ body.page-financial-services {
 .fb-1 { top: 14px; right: -24px; animation: fs-float-y 4s ease-in-out infinite; }
 .fb-2 { bottom: 36px; left: -36px; animation: fs-float-y 4s ease-in-out infinite 0.8s; }
 
-.fb-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+.fb-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
 
 .fb-blue {
   background: linear-gradient(135deg, var(--blue), var(--blue-dark));
@@ -681,7 +682,7 @@ body.page-financial-services {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--blue), var(--green));
+  background: linear-gradient(90deg, var(--blue), var(--gold));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
@@ -726,8 +727,8 @@ body.page-financial-services {
 .service-card:hover .sc-icon { transform: scale(1.1) rotateZ(-5deg); }
 
 .sc-icon-blue { background: var(--blue-pale); }
-.sc-icon-green { background: var(--green-pale); }
-.sc-icon-mix { background: linear-gradient(135deg, var(--blue-pale), var(--green-pale)); }
+.sc-icon-gold { background: var(--gold-pale); }
+.sc-icon-mix { background: linear-gradient(135deg, var(--blue-pale), var(--gold-pale)); }
 
 .sc-icon svg { width: 30px; height: 30px; }
 
@@ -819,8 +820,8 @@ body.page-financial-services {
 
 .fs-1 .flow-step-bubble { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); }
 .fs-2 .flow-step-bubble { background: linear-gradient(135deg, #5c7cfa, var(--blue)); }
-.fs-3 .flow-step-bubble { background: linear-gradient(135deg, var(--green), var(--green-light)); }
-.fs-4 .flow-step-bubble { background: linear-gradient(135deg, var(--blue-dark), var(--green)); }
+.fs-3 .flow-step-bubble { background: linear-gradient(135deg, var(--gold), var(--gold-light)); }
+.fs-4 .flow-step-bubble { background: linear-gradient(135deg, var(--blue-dark), var(--gold)); }
 
 .flow-step-bubble svg { width: 34px; height: 34px; }
 
@@ -856,7 +857,7 @@ body.page-financial-services {
 .flow-arrow-line {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, var(--blue), var(--green));
+  background: linear-gradient(90deg, var(--blue), var(--gold));
   position: relative;
   overflow: hidden;
 }
@@ -879,7 +880,7 @@ body.page-financial-services {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 7px solid var(--green);
+  border-left: 7px solid var(--gold);
 }
 
 /* Partner */
@@ -1099,7 +1100,7 @@ body.page-financial-services {
 .wv-bar {
   height: 100%;
   border-radius: 6px;
-  background: linear-gradient(90deg, var(--white), var(--green-light));
+  background: linear-gradient(90deg, var(--white), var(--gold-light));
 }
 
 .wv-val { font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.9); margin-top: 5px; }
@@ -1126,7 +1127,7 @@ body.page-financial-services {
   transform: translateX(-50%);
   width: 300px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, var(--blue), var(--green), transparent);
+  background: linear-gradient(90deg, transparent, var(--blue), var(--gold), transparent);
 }
 
 .cta-inner::after {
@@ -1154,7 +1155,7 @@ body.page-financial-services {
 
 .ct-item { display: flex; align-items: center; gap: 7px; font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
 
-.ct-item svg { width: 14px; height: 14px; color: var(--green); }
+.ct-item svg { width: 14px; height: 14px; color: var(--gold); }
 
 /* Footer */
 footer {

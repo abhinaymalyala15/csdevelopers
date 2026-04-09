@@ -5322,7 +5322,7 @@ body.page-home {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #64748b;
+  color: var(--color-muted);
 }
 
 .ph-hero-split__title {
@@ -5335,8 +5335,13 @@ body.page-home {
   color: #111827;
 }
 
+/* Brand headline accents: blue + pale gold (logo palette) */
 .ph-hero-split__accent {
-  color: #e60023;
+  color: var(--brand-blue);
+}
+
+.ph-hero-split__title .ph-hero-split__accent ~ .ph-hero-split__accent {
+  color: var(--brand-gold);
 }
 
 .ph-hero-split__lead {
@@ -5384,14 +5389,14 @@ body.page-home {
 
 .ph-hero-split__pill:hover {
   background: #fff;
-  border-color: rgba(230, 0, 35, 0.35);
-  color: #e60023;
+  border-color: rgba(74, 108, 247, 0.35);
+  color: var(--brand-blue);
   transform: translateY(-1px);
   box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
 }
 
 .ph-hero-split__pill:focus-visible {
-  outline: 2px solid #e60023;
+  outline: 2px solid var(--brand-blue);
   outline-offset: 2px;
 }
 
@@ -5418,8 +5423,8 @@ body.page-home {
 }
 
 .page-home .ph-hero-split__btn-outline:hover {
-  background: #f8fafc;
-  border-color: #e60023;
+  background: #fafafa;
+  border-color: var(--brand-blue);
   color: #111827;
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(17, 24, 39, 0.1);
@@ -6410,7 +6415,7 @@ body.page-home {
 }
 
 .ph-trust__star {
-  color: #f59e0b;
+  color: var(--brand-gold);
   margin-right: 4px;
 }
 
