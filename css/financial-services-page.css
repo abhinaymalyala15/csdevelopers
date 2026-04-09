@@ -11,9 +11,9 @@
   --green: #118627;
   --green-light: #1aaa34;
   --green-pale: #e6f5e9;
-  --bg: #f4f6ff;
-  --text-main: #0d1535;
-  --text-muted: #5a6484;
+  --bg: #ffffff;
+  --text-main: #111827;
+  --text-muted: #4b5563;
   --text-light: #9aa3c2;
   --border: #dce2f8;
   --shadow-sm: 0 2px 16px rgba(74, 108, 247, 0.08);
@@ -179,8 +179,8 @@ body.page-financial-services {
 
 /* Site header — matches homepage glass pill bar (css/style.css .page-home ph-header) */
 .page-financial-services {
-  --ph-red: #1d4ed8;
-  --ph-red-dark: #1e40af;
+  --ph-red: #4a6cf7;
+  --ph-red-dark: #3a56d4;
 }
 
 .page-financial-services .site-header.ph-header {
@@ -206,16 +206,16 @@ body.page-financial-services {
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.88);
   box-shadow:
-    0 4px 6px rgba(15, 23, 42, 0.04),
-    0 18px 44px rgba(15, 23, 42, 0.1),
-    0 0 0 1px rgba(15, 23, 42, 0.04) inset;
+    0 4px 6px rgba(17, 24, 39, 0.04),
+    0 18px 44px rgba(17, 24, 39, 0.1),
+    0 0 0 1px rgba(17, 24, 39, 0.04) inset;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .page-financial-services .site-header.is-scrolled .ph-nav-inner {
   box-shadow:
-    0 8px 12px rgba(15, 23, 42, 0.06),
-    0 28px 56px rgba(15, 23, 42, 0.14),
+    0 8px 12px rgba(17, 24, 39, 0.06),
+    0 28px 56px rgba(17, 24, 39, 0.14),
     0 0 0 1px rgba(255, 255, 255, 0.9) inset;
 }
 
@@ -226,7 +226,7 @@ body.page-financial-services {
 }
 
 .page-financial-services .main-nav a {
-  color: #0a0a0a;
+  color: #111827;
   font-weight: 500;
   border-radius: 999px;
   position: relative;
@@ -241,7 +241,7 @@ body.page-financial-services {
   width: 0;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--ph-red), #60a5fa);
+  background: linear-gradient(90deg, var(--ph-red), #8fa4fc);
   transform: translateX(-50%);
   transition: width 0.3s ease;
   pointer-events: none;
@@ -253,26 +253,26 @@ body.page-financial-services {
 
 .page-financial-services .main-nav a:hover {
   color: var(--ph-red);
-  background: rgba(29, 78, 216, 0.08);
+  background: rgba(74, 108, 247, 0.08);
 }
 
 .page-financial-services .ph-nav-cta,
 .page-financial-services .main-nav .nav-cta.ph-nav-cta {
-  background: linear-gradient(180deg, #3b82f6 0%, var(--ph-red) 100%);
+  background: linear-gradient(180deg, #6b87f9 0%, var(--ph-red) 100%);
   color: #fff !important;
-  border: 1px solid rgba(29, 78, 216, 0.45);
-  box-shadow: 0 6px 24px rgba(29, 78, 216, 0.35);
+  border: 1px solid rgba(74, 108, 247, 0.45);
+  box-shadow: 0 6px 24px rgba(74, 108, 247, 0.35);
   font-weight: 700;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, filter 0.3s ease;
 }
 
 .page-financial-services .ph-nav-cta:hover,
 .page-financial-services .main-nav .nav-cta.ph-nav-cta:hover {
-  background: linear-gradient(180deg, #60a5fa 0%, var(--ph-red-dark) 100%);
+  background: linear-gradient(180deg, #8fa4fc 0%, var(--ph-red-dark) 100%);
   color: #fff !important;
   box-shadow:
-    0 8px 28px rgba(29, 78, 216, 0.45),
-    0 0 32px rgba(96, 165, 250, 0.45);
+    0 8px 28px rgba(74, 108, 247, 0.45),
+    0 0 32px rgba(143, 164, 252, 0.45);
   transform: translateY(-1px) scale(1.02);
 }
 
@@ -281,7 +281,7 @@ body.page-financial-services {
 }
 
 .page-financial-services .nav-toggle span {
-  background: #0a0a0a;
+  background: #111827;
 }
 
 /* Hero (scoped so global style.css .hero / .hero-content rules do not constrain layout) */
