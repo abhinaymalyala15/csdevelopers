@@ -4376,6 +4376,95 @@ body.page-home {
   color: #b4c4fd;
 }
 
+/* Homepage — design refresh (subtle: no extra sections / motion widgets) */
+.page-home .ph-hero-split__eyebrow {
+  color: var(--brand-blue);
+  letter-spacing: 0.18em;
+}
+
+.page-home .ph-hero-split__slider-frame {
+  box-shadow:
+    0 4px 6px rgba(2, 6, 23, 0.06),
+    0 24px 56px rgba(2, 6, 23, 0.12),
+    0 0 0 1px rgba(17, 24, 39, 0.06) inset,
+    0 0 0 1px rgba(201, 169, 98, 0.22);
+}
+
+.page-home .ph-hero-split__stats-bar {
+  position: relative;
+}
+
+.page-home .ph-hero-split__stats-bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-gold));
+  border-radius: 2px 2px 0 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page-home .ph-hero-rhythm {
+  background: linear-gradient(180deg, #ffffff 0%, #eef2f7 100%);
+  border-top-color: rgba(17, 24, 39, 0.07);
+}
+
+.page-home .ph-bento {
+  position: relative;
+}
+
+.page-home .ph-bento::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92%, 640px);
+  height: 3px;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, transparent, rgba(74, 108, 247, 0.55), rgba(201, 169, 98, 0.5), transparent);
+  pointer-events: none;
+}
+
+.page-home .ph-decision-card:hover {
+  box-shadow:
+    0 20px 48px rgba(10, 10, 10, 0.12),
+    0 0 0 1px rgba(201, 169, 98, 0.14);
+}
+
+.page-home .ph-why-card:hover {
+  border-color: rgba(74, 108, 247, 0.2);
+}
+
+.page-home .ph-contact .ph-glass {
+  border: 1px solid rgba(74, 108, 247, 0.12);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 22px 56px rgba(17, 24, 39, 0.09),
+    0 0 0 1px rgba(17, 24, 39, 0.04);
+}
+
+.page-home .site-footer.ph-footer {
+  position: relative;
+  padding-top: clamp(2.25rem, 4vw, 3rem);
+}
+
+.page-home .site-footer.ph-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(88%, 720px);
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(74, 108, 247, 0.4), rgba(201, 169, 98, 0.45), transparent);
+  pointer-events: none;
+}
+
 /* Hero eyebrow strip — premium bar */
 .page-home .hero-carousel-eyebrow.ph-hero-eyebrow {
   background: #111827;
@@ -5265,7 +5354,7 @@ body.page-home {
 /* ---------- Premium split hero (50/50 — fixed copy + Swiper) ---------- */
 .page-home .ph-bento-hero.ph-hero-split {
   padding: calc(var(--header-h) + clamp(12px, 2.5vw, 20px)) clamp(20px, 4vw, 36px) clamp(1.5rem, 4vw, 2.5rem);
-  background: #ffffff;
+  background: linear-gradient(165deg, #f4f7fc 0%, #ffffff 38%, #ffffff 100%);
 }
 
 .ph-hero-split__shell {
