@@ -13,9 +13,10 @@
   <link rel="stylesheet" href="css/style.css?v=brand2027" />
   <link rel="stylesheet" href="css/ev-mobility.css?v=brand2027" />
 </head>
-<body class="page-ev-mobility">
-  <a href="https://wa.me/919581266445?text=Hi%20CS%20Developers%2C%20I%27d%20like%20to%20know%20more%20about%20EV%20mobility." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+<body class="page-home page-ev-mobility">
+  <a href="https://wa.me/919581266445?text=Hi%20CS%20Developers%2C%20I%27d%20like%20to%20know%20more%20about%20EV%20mobility." class="whatsapp-float whatsapp-float--home" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884M8.68 7.318c-.15-.366-.306-.372-.45-.378-.116-.006-.248-.006-.38-.006-.133 0-.347.05-.529.248-.182.198-.696.679-.696 1.655 0 .977.71 1.921.809 2.051.099.131.1.131.248.131.149 0 .347-.05.529-.248.182-.198.696-.679.696-1.654 0-.976-.71-1.921-.809-2.051"/></svg>
+    <span class="whatsapp-float__tooltip" aria-hidden="true">Chat with us</span>
     <span class="whatsapp-pulse"></span>
   </a>
 
@@ -32,7 +33,7 @@
           <li><a href="index.html#home">Home</a></li>
           <li><a href="index.html#decision">Start here</a></li>
           <li><a href="index.html#bento-services">Ecosystem</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="real-estate.html">Projects</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="index.html#contact" class="nav-cta ph-nav-cta">Contact</a></li>
         </ul>
@@ -42,7 +43,7 @@
 
   <div class="em-grain" aria-hidden="true"></div>
 
-  <main class="em-main">
+  <main class="em-main" id="ev-page">
     <section class="em-hero" id="hero">
       <div class="em-container">
         <div class="em-hero-grid">
@@ -62,7 +63,7 @@
             </p>
 
             <div class="em-hero-buttons">
-              <a href="#offerings" class="btn-primary" id="btn-explore-ev">
+              <a href="#ev-bikes" class="btn-primary" id="btn-explore-ev">
                 Explore EV Opportunities
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </a>
@@ -142,53 +143,98 @@
       </div>
     </section>
 
-    <section class="em-offerings" id="offerings">
+    <section class="ev-bikes" id="ev-bikes">
       <div class="em-container">
-        <div class="em-offerings-header reveal">
-          <div class="em-section-label">Our Products</div>
-          <h2 class="em-section-title">EV Solutions <span>Built for India</span></h2>
-          <p class="em-section-desc">From personal mobility to commercial fleet operations, we offer a complete range of electric vehicle solutions.</p>
+        <div class="ev-bikes-header reveal">
+          <h2 class="em-section-title">Electric Bikes for <span>Every Ride</span></h2>
+          <p class="em-section-desc">From budget commuters to performance tourers — pick the bike that fits your road.</p>
         </div>
 
-        <div class="em-offerings-grid">
-          <div class="em-offering-card reveal reveal-delay-1" id="offering-bikes">
-            <img src="assets/hero/hero-ev.png" alt="Electric Bikes" class="em-offering-img" width="800" height="600" />
-            <div class="em-offering-body">
-              <div class="em-offering-icon">🚲</div>
-              <h3 class="em-offering-title">Electric Bikes</h3>
-              <p class="em-offering-desc">Premium e-bikes engineered for Indian roads. From city commuting to long-range touring — efficient, silent, and powerful.</p>
-              <span class="em-offering-tag">Available Now</span>
+        <div class="bike-cards-grid">
+          <div class="bike-card reveal reveal-delay-1" id="bike-urban-120">
+            <div class="bike-badge badge-bestseller">Best Seller</div>
+            <div class="bike-image-wrap">
+              <img src="assets/hero/hero-ev.png" alt="CS Urban 120 Electric Bike" class="bike-img" width="800" height="600" />
+            </div>
+            <div class="bike-body">
+              <h3 class="bike-name">CS Urban 120</h3>
+              <p class="bike-specs">120 km range · 250W motor · 6 hr charge · 25 kg</p>
+              <div class="bike-pricing">
+                <span class="bike-price">₹65,000</span>
+                <span class="bike-emi">EMI ₹2,100/mo</span>
+              </div>
+              <button type="button" class="btn-enquire" id="enquire-urban-120" data-scroll="test-ride-form">Enquire Now</button>
             </div>
           </div>
 
-          <div class="em-offering-card reveal reveal-delay-2" id="offering-scooters">
-            <img src="assets/hero/hero-ev.png" alt="Electric Scooters" class="em-offering-img" width="800" height="600" />
-            <div class="em-offering-body">
-              <div class="em-offering-icon">🛵</div>
-              <h3 class="em-offering-title">Electric Scooters</h3>
-              <p class="em-offering-desc">Sleek, affordable electric scooters designed for urban mobility. Low maintenance, zero emissions, and smart connectivity.</p>
-              <span class="em-offering-tag">Coming Soon</span>
+          <div class="bike-card bike-card-featured reveal reveal-delay-2" id="bike-apex-pro">
+            <div class="bike-badge badge-newlaunch">New Launch</div>
+            <div class="bike-image-wrap">
+              <img src="assets/hero/hero-ev.png" alt="CS Apex Pro Electric Bike" class="bike-img" width="800" height="600" />
+            </div>
+            <div class="bike-body">
+              <h3 class="bike-name">CS Apex Pro</h3>
+              <p class="bike-specs">180 km range · 500W motor · 4 hr fast charge · 28 kg</p>
+              <div class="bike-pricing">
+                <span class="bike-price">₹95,000</span>
+                <span class="bike-emi">EMI ₹3,100/mo</span>
+              </div>
+              <button type="button" class="btn-enquire" id="enquire-apex-pro" data-scroll="test-ride-form">Enquire Now</button>
             </div>
           </div>
 
-          <div class="em-offering-card reveal reveal-delay-3" id="offering-fleet">
-            <img src="assets/hero/hero-ev.png" alt="Fleet Solutions" class="em-offering-img" width="800" height="600" />
-            <div class="em-offering-body">
-              <div class="em-offering-icon">🚛</div>
-              <h3 class="em-offering-title">Fleet Solutions</h3>
-              <p class="em-offering-desc">End-to-end electric fleet management for delivery businesses, logistics companies, and corporate fleets.</p>
-              <span class="em-offering-tag">Enterprise</span>
+          <div class="bike-card reveal reveal-delay-3" id="bike-cargo-x">
+            <div class="bike-badge badge-fleet">Fleet Ready</div>
+            <div class="bike-image-wrap">
+              <img src="assets/hero/hero-ev.png" alt="CS Cargo X Electric Bike" class="bike-img" width="800" height="600" />
+            </div>
+            <div class="bike-body">
+              <h3 class="bike-name">CS Cargo X</h3>
+              <p class="bike-specs">100 km range · 750W motor · Payload 150 kg · GPS</p>
+              <div class="bike-pricing">
+                <span class="bike-price">₹1,10,000</span>
+                <span class="bike-emi">Fleet pricing avail.</span>
+              </div>
+              <button type="button" class="btn-enquire" id="enquire-cargo-x" data-scroll="test-ride-form">Enquire Now</button>
             </div>
           </div>
+        </div>
 
-          <div class="em-offering-card reveal reveal-delay-4" id="offering-charging">
-            <img src="assets/hero/hero-ev.png" alt="Charging Infrastructure" class="em-offering-img" width="800" height="600" />
-            <div class="em-offering-body">
-              <div class="em-offering-icon">⚡</div>
-              <h3 class="em-offering-title">Charging Infrastructure</h3>
-              <p class="em-offering-desc">Future-ready charging stations with rapid charging technology. Strategic deployment across key urban corridors.</p>
-              <span class="em-offering-tag">Future-Ready</span>
+        <div class="test-ride-section reveal" id="test-ride-form">
+          <div class="test-ride-inner">
+            <div class="test-ride-copy">
+              <h3 class="test-ride-title">Book a Test Ride or Get a Quote</h3>
+              <p class="test-ride-desc">Leave your details and our team will reach out within 24 hours with pricing, availability, and fleet options tailored to you.</p>
             </div>
+
+            <form class="test-ride-form" id="bikeEnquiryForm">
+              <div class="form-row">
+                <input type="text" id="rider-name" name="riderName" placeholder="Your name" required class="form-input" autocomplete="name" />
+              </div>
+              <div class="form-row">
+                <input
+                  type="tel"
+                  id="rider-phone"
+                  name="riderPhone"
+                  placeholder="Phone number"
+                  required
+                  class="form-input"
+                  autocomplete="tel"
+                  pattern="[6-9][0-9]{9}"
+                  title="Enter a valid 10-digit Indian mobile number"
+                />
+              </div>
+              <div class="form-row">
+                <select id="bike-model-select" name="bikeModel" required class="form-select">
+                  <option value="" disabled selected>Select a bike model</option>
+                  <option value="CS Urban 120">CS Urban 120 — ₹65,000</option>
+                  <option value="CS Apex Pro">CS Apex Pro — ₹95,000</option>
+                  <option value="CS Cargo X">CS Cargo X — ₹1,10,000</option>
+                  <option value="Fleet Enquiry">Fleet Enquiry (Multiple Units)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-callback" id="btn-request-callback">Request Callback →</button>
+            </form>
           </div>
         </div>
       </div>
@@ -377,53 +423,43 @@
     </section>
   </main>
 
-  <footer class="em-footer">
-    <div class="em-container">
-      <div class="em-footer__grid">
-        <div class="em-footer__brand">
-          <a href="index.html#home" class="em-footer__logo-link logo logo--brand">
-            <img src="assets/logo-cs-deveelopers.png?v=6" alt="CS Developers Logo" class="logo__img" width="200" height="120" onerror="this.onerror=null;this.src='assets/logo-cs-deveelopers.svg'" />
-          </a>
-          <p>Earn, invest, and grow — one ecosystem for property, partners, EV mobility, and progress across India.</p>
-        </div>
-
-        <div class="em-footer__col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="index.html#decision">Start Here</a></li>
-            <li><a href="index.html#bento-services">Ecosystem</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-
-        <div class="em-footer__col">
-          <h4>EV Mobility</h4>
-          <ul>
-            <li><a href="#offerings">Electric Bikes</a></li>
-            <li><a href="#offerings">Electric Scooters</a></li>
-            <li><a href="#offerings">Fleet Solutions</a></li>
-            <li><a href="#offerings">Charging Infra</a></li>
-          </ul>
-        </div>
-
-        <div class="em-footer__col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="tel:+919581266445">+91 95812 66445</a></li>
-            <li><a href="mailto:info@csdeveelopers.com">info@csdeveelopers.com</a></li>
-            <li><a href="https://wa.me/919581266445">WhatsApp</a></li>
-          </ul>
+  <footer class="site-footer ph-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html#home" class="logo footer-logo logo--brand">
+          <img src="assets/logo-cs-deveelopers.png?v=6" alt="CS Developers" class="logo__img" width="240" height="144" onerror="this.onerror=null;this.src='assets/logo-cs-deveelopers.svg'" />
+        </a>
+        <p>Earn, invest, and grow—one ecosystem for property, partners, and progress.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#decision">Start here</a></li>
+          <li><a href="index.html#bento-services">Ecosystem</a></li>
+          <li><a href="study-abroad.html">Study abroad</a></li>
+          <li><a href="real-estate.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+919581266445">+91 95812 66445</a></li>
+          <li><a href="mailto:info@csdeveelopers.com">info@csdeveelopers.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="footer-cta">
+          <a href="index.html#contact" class="btn btn-primary btn-sm ph-btn-primary">Contact</a>
+          <a href="https://wa.me/919581266445" class="btn btn-outline btn-sm" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
-
-      <div class="em-footer__bottom">
-        <p>&copy; <span id="year"></span> CS Developers. All rights reserved. | <a href="https://csdeveelopers.in/">csdeveelopers.in</a></p>
-        <div class="em-footer__social">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="https://wa.me/919581266445" aria-label="WhatsApp">wa</a>
-        </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year"></span> CS Developers. All rights reserved.</p>
+        <p class="footer-meta"><a href="https://csdeveelopers.in/" target="_blank" rel="noopener">csdeveelopers.in</a></p>
       </div>
     </div>
   </footer>

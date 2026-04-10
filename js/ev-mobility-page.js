@@ -27,10 +27,39 @@
       });
     });
   }
+
   var emMain = document.querySelector(".em-main");
   if (emMain) bindSmoothAnchors(emMain);
-  var emFooter = document.querySelector(".em-footer");
-  if (emFooter) bindSmoothAnchors(emFooter);
+
+  var siteFooter = document.querySelector(".site-footer.ph-footer");
+  if (siteFooter) bindSmoothAnchors(siteFooter);
+
+  document.querySelectorAll(".btn-enquire[data-scroll]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var id = btn.getAttribute("data-scroll");
+      if (!id) return;
+      var el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  var bikeForm = document.getElementById("bikeEnquiryForm");
+  if (bikeForm) {
+    bikeForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = document.getElementById("rider-name");
+      var phone = document.getElementById("rider-phone");
+      var model = document.getElementById("bike-model-select");
+      if (!name || !phone || !model) return;
+      var n = name.value.trim();
+      var p = phone.value.trim();
+      var m = model.value;
+      var message = encodeURIComponent(
+        "Hi CS Developers! I'd like to enquire about: " + m + "\nName: " + n + "\nPhone: " + p
+      );
+      window.open("https://wa.me/919581266445?text=" + message, "_blank");
+    });
+  }
 
   var chartContainer = document.querySelector(".em-isc-chart");
   if (chartContainer) {
